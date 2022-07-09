@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALTAF</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        
+        <img ondblclick="openLink()" class="logo-img" src="vivo.png" alt="">
+        <input name="search" id="search" class="search-box" type="text" placeholder="Search From Altaf">
+        <input onclick="handleSearch()" class="submit-btn" type="submit" value="Search">
+    </div>
+    <script>
+        const handleSearch = (event) => {
+
+            const searchBox = document.getElementById('search');
+            let value = searchBox.value;
+            let url = 'https://www.google.com/search?q='+value;
+
+            window.open(url,'_self')
+
+
+
+        }
+        const openLink = ()=>{
+            window.open('https://m.me/altaf.web')
+        }
+
+
+    </script>
+    <script src="main.js"></script>
+</body>
+
+</html>
