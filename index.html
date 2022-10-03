@@ -10,25 +10,32 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" >
+
         
-        <img ondblclick="openLink()" class="logo-img" src="vivo.png" alt="">
-        <input name="search" id="search" class="search-box" type="text" placeholder="Search From Altaf">
-        <input onclick="handleSearch()" class="submit-btn" type="submit" value="Search">
+        <img id="logo" ondblclick="openLink()" class="logo-img" src="vivo.png" alt="">
+
+        <input autocomplete="off" name="search" id="search" class="search-box" type="text"
+            placeholder="Search From Altaf">
+
+        <input id="submit" onclick="handleSearch()" class="submit-btn" type="submit" value="Search">
+        <h2 id="result"></h2>
+        <div onclick="handleVoiceSearch()" class="microphone"><img src="mic.png" alt=""></div>
+
     </div>
     <script>
         const handleSearch = (event) => {
 
             const searchBox = document.getElementById('search');
             let value = searchBox.value;
-            let url = 'https://www.google.com/search?q='+value;
+            let url = 'https://www.google.com/search?q=' + value;
 
-            window.open(url,'_self')
+            window.open(url, '_self')
 
 
 
         }
-        const openLink = ()=>{
+        const openLink = () => {
             window.open('https://m.me/altaf.web')
         }
 
